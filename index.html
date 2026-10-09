@@ -16,65 +16,58 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
         
-        header { background: var(--primary); color: var(--text-light); padding: 1rem 4%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .logo-container { display: flex; align-items: center; gap: 12px; }
-        .logo-circle { width: 45px; height: 45px; border-radius: 50%; overflow: hidden; border: 2px solid var(--secondary); display: flex; align-items: center; justify-content: center; background: #fff; }
+        header { background: var(--primary); color: var(--text-light); padding: 12px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .logo-container { display: flex; align-items: center; gap: 10px; }
+        .logo-circle { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; border: 2px solid var(--secondary); background: #fff; display: flex; align-items: center; justify-content: center; }
         .logo-circle img { width: 100%; height: 100%; object-fit: cover; }
-        .logo-area h2 { color: var(--secondary); font-size: 1.2rem; letter-spacing: 0.5px; }
+        .logo-area h2 { color: var(--secondary); font-size: 1.1rem; letter-spacing: 0.5px; }
         
-        nav { display: flex; gap: 15px; }
-        nav a { color: var(--text-light); text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: 0.3s; }
+        nav { display: flex; gap: 12px; }
+        nav a { color: var(--text-light); text-decoration: none; font-weight: 500; font-size: 0.8rem; transition: 0.3s; }
         nav a:hover { color: var(--secondary); }
 
-        /* Sidebar / Side Tab Styling */
-        .main-layout { display: flex; min-height: 100vh; }
-        aside { width: 220px; background: var(--accent); color: var(--text-light); padding: 20px; display: none; }
-        @media(min-width: 992px) { aside { display: block; } }
-        aside h3 { color: var(--secondary); font-size: 1rem; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; }
-        aside ul { list-style: none; }
-        aside ul li { margin-bottom: 12px; }
-        aside ul li a { color: var(--text-light); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
-        aside ul li a:hover { color: var(--secondary); padding-left: 5px; }
-
-        .content-area { flex: 1; padding: 20px; max-width: 100%; }
+        .container { width: 100%; max-width: 800px; margin: 0 auto; padding: 15px; }
 
         /* Proposal Poster Section */
-        .poster-section { background: linear-gradient(135deg, var(--primary), var(--accent)); color: var(--text-light); border-radius: 12px; padding: 30px 20px; text-align: center; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
-        .poster-section h1 { font-size: 1.8rem; margin-bottom: 15px; line-height: 1.2; }
+        .poster-section { background: linear-gradient(135deg, var(--primary), var(--accent)); color: var(--text-light); border-radius: 12px; padding: 25px 15px; text-align: center; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .poster-section h1 { font-size: 1.5rem; margin-bottom: 10px; line-height: 1.3; }
         .poster-section h1 span { color: var(--secondary); }
-        .poster-section p { font-size: 0.95rem; margin-bottom: 20px; color: #CBD5E1; }
-        .poster-img { width: 100%; max-width: 600px; border-radius: 8px; border: 2px solid var(--secondary); box-shadow: 0 5px 15px rgba(0,0,0,0.3); margin-top: 15px; }
+        .poster-section p { font-size: 0.9rem; margin-bottom: 15px; color: #CBD5E1; }
+        .poster-img { width: 100%; border-radius: 8px; border: 2px solid var(--secondary); margin-top: 10px; }
 
-        section { padding: 3rem 2%; }
-        .section-title { text-align: center; margin-bottom: 2rem; }
-        .section-title h2 { font-size: 1.8rem; color: var(--primary); margin-bottom: 8px; }
-        .section-title p { color: #64748B; font-size: 0.9rem; }
+        section { margin-bottom: 25px; }
+        .section-title { text-align: center; margin-bottom: 1.5rem; }
+        .section-title h2 { font-size: 1.5rem; color: var(--primary); margin-bottom: 5px; }
+        .section-title p { color: #64748B; font-size: 0.85rem; }
 
-        /* 2 Plans per row */
-        .packages-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
-        @media(max-width: 600px) { .packages-grid { grid-template-columns: 1fr; } }
+        /* Packages Grid - 2 per row */
+        .packages-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        @media(max-width: 480px) { .packages-grid { grid-template-columns: 1fr; } }
         
-        .package-card { background: #FFFFFF; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; }
+        .package-card { background: #FFFFFF; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; }
         .package-card.popular { border-color: var(--secondary); background: #fffcf0; }
-        .package-card h3 { font-size: 1.2rem; color: var(--primary); margin-bottom: 8px; }
-        .price { font-size: 1.3rem; font-weight: bold; color: var(--secondary); margin-bottom: 12px; }
-        .package-card ul { list-style: none; margin-bottom: 15px; text-align: left; }
-        .package-card ul li { padding: 4px 0; border-bottom: 1px solid #F1F5F9; font-size: 0.8rem; }
+        .package-card h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 5px; }
+        .price { font-size: 1.2rem; font-weight: bold; color: var(--secondary); margin-bottom: 10px; }
+        .package-card ul { list-style: none; margin-bottom: 10px; text-align: left; }
+        .package-card ul li { padding: 3px 0; border-bottom: 1px solid #F1F5F9; font-size: 0.75rem; }
 
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
-        .service-card { background: #FFFFFF; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); }
-        .service-card h3 { margin-bottom: 8px; color: var(--primary); font-size: 1.1rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        @media(max-width: 480px) { .services-grid { grid-template-columns: 1fr; } }
+        .service-card { background: #FFFFFF; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-top: 3px solid var(--secondary); }
+        .service-card h3 { margin-bottom: 5px; color: var(--primary); font-size: 1rem; }
+        .service-card p { font-size: 0.8rem; color: #64748B; }
 
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
-        .portfolio-item { background: var(--primary); color: white; padding: 20px; border-radius: 8px; text-align: center; font-weight: bold; font-size: 0.95rem; border-bottom: 4px solid var(--secondary); }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        @media(max-width: 480px) { .portfolio-grid { grid-template-columns: 1fr; } }
+        .portfolio-item { background: var(--primary); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; font-size: 0.85rem; border-bottom: 3px solid var(--secondary); }
 
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
-        .testimonial-card { background: #FFFFFF; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .testimonial-card p { font-style: italic; margin-bottom: 10px; font-size: 0.85rem; }
-        .client-name { font-weight: bold; color: var(--secondary); font-size: 0.8rem; }
+        .testimonials-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        .testimonial-card { background: #FFFFFF; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .testimonial-card p { font-style: italic; margin-bottom: 8px; font-size: 0.8rem; }
+        .client-name { font-weight: bold; color: var(--secondary); font-size: 0.75rem; }
 
-        footer { background: var(--primary); color: var(--text-light); padding: 2rem 5%; text-align: center; }
-        footer p { margin-top: 10px; color: #94A3B8; font-size: 0.8rem; }
+        footer { background: var(--primary); color: var(--text-light); padding: 1.5rem 5%; text-align: center; }
+        footer p { margin-top: 5px; color: #94A3B8; font-size: 0.75rem; }
     </style>
 </head>
 <body>
@@ -82,10 +75,10 @@
     <header>
         <div class="logo-container">
             <div class="logo-circle">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=150&q=80" alt="DevCraft Logo">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=150&q=80" alt="Logo">
             </div>
             <div class="logo-area">
-                <h2>DEVCRAFT STUDIO</h2>
+                <h2>DEVCRAFT</h2>
             </div>
         </div>
         <nav>
@@ -96,171 +89,154 @@
         </nav>
     </header>
 
-    <div class="main-layout">
-        <!-- Side Tab / Sidebar -->
-        <aside>
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#proposal">Website Proposal</a></li>
-                <li><a href="#services">Our Services</a></li>
-                <li><a href="#packages">Fee Packages</a></li>
-                <li><a href="#demo">Demo Portfolio</a></li>
-                <li><a href="#reviews">Client Reviews</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </aside>
+    <div class="container">
+        
+        <!-- Proposal Poster Section -->
+        <section id="proposal" class="poster-section">
+            <h1>Crafting Digital Experiences, <span>Building Businesses Online.</span></h1>
+            <p>A digital studio where we blend technology and elegant design to craft your complete business online.</p>
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Proposal Poster" class="poster-img">
+        </section>
 
-        <!-- Main Content Portion -->
-        <div class="content-area">
-            
-            <!-- Proposal Poster Section on Top -->
-            <section id="proposal" class="poster-section" style="padding: 20px 10px;">
-                <h1>Crafting Digital Experiences, <span>Building Businesses Online.[span_2](start_span)[span_2](end_span)</span></h1>
-                <p>A digital studio where we blend technology and elegant design to craft your complete business online[span_3](start_span)[span_3](end_span).</p>
-                <!-- Attached Proposal Poster Image integrated -->
-                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="DevCraft Proposal Poster" class="poster-img">
-            </section>
+        <!-- About Us -->
+        <section style="background: #FFFFFF; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+            <h3 style="color: var(--primary); margin-bottom: 8px; font-size: 1.2rem;">About DevCraft Studio</h3>
+            <p style="font-size: 0.85rem;">DevCraft Studio ek professional website development aur digital solutions agency hai. Humara maqsad aapke business ko modern aur fast websites ke zariye online grow karna hai.</p>
+            <p style="margin-top: 8px; color: var(--secondary); font-weight: bold; font-size: 0.85rem;">Your Vision, Our Code</p>
+        </section>
 
-            <!-- About Us -->
-            <section style="background: #FFFFFF; border-radius: 8px; padding: 25px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 1.5rem;">About DevCraft Studio</h3>
-                <p>DevCraft Studio ek professional website development aur digital solutions agency hai[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span). Humara maqsad aapke business ko modern, fast aur secure websites ke zariye online bulandiyon tak pahunchana hai[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span).</p>
-                <p style="margin-top: 10px; color: var(--secondary); font-weight: bold;">Your Vision, Our Code[span_8](start_span)[span_8](end_span)[span_9](start_span)[span_9](end_span)</p>
-            </section>
+        <!-- Services Section -->
+        <section id="services" style="margin-top: 25px;">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Complete Web Solutions for Your Business</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Business Websites</h3>
+                    <p>Showcase your brand professionally.</p>
+                </div>
+                <div class="service-card">
+                    <h3>E-Commerce Stores</h3>
+                    <p>Sell online securely.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Portfolio Websites</h3>
+                    <p>Perfect for freelancers.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Landing Pages</h3>
+                    <p>Turn visitors into customers.</p>
+                </div>
+            </div>
+        </section>
 
-            <!-- Services Section -->
-            <section id="services">
-                <div class="section-title">
-                    <h2>Our Services</h2>
-                    <p>Complete Web Solutions for Your Business[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)</p>
+        <!-- Packages Section (2 in 1 row) -->
+        <section id="packages">
+            <div class="section-title">
+                <h2>Website Packages</h2>
+                <p>Choose the plan that fits your goals</p>
+            </div>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>Basic</h3>
+                    <div class="price">Rs. 2,500</div>
+                    <ul>
+                        <li>Search bar included</li>
+                        <li>Products - up to 30</li>
+                        <li>Basic checkout system</li>
+                        <li>Free GitHub domain</li>
+                        <li>2 editing rounds free</li>
+                    </ul>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Business Websites</h3>
-                        <p>Showcase your brand professionally[span_12](start_span)[span_12](end_span)[span_13](start_span)[span_13](end_span).</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>E-Commerce Stores</h3>
-                        <p>Sell online with case and security[span_14](start_span)[span_14](end_span).</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Portfolio Websites</h3>
-                        <p>Perfect for freelancers & creatives[span_15](start_span)[span_15](end_span).</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Landing Pages</h3>
-                        <p>Turn visitors into customers[span_16](start_span)[span_16](end_span).</p>
-                    </div>
+                <div class="package-card">
+                    <h3>Standard</h3>
+                    <div class="price">Rs. 3,500</div>
+                    <ul>
+                        <li>Search bar included</li>
+                        <li>Products - up to 40</li>
+                        <li>Product categories & images</li>
+                        <li>Updated checkout system</li>
+                        <li>3 editing rounds free</li>
+                    </ul>
                 </div>
-            </section>
+                <div class="package-card popular">
+                    <h3>Professional</h3>
+                    <div class="price">Rs. 5,000</div>
+                    <ul>
+                        <li>Products up to 50</li>
+                        <li>Updated checkout systems</li>
+                        <li>Lifetime GitHub domain</li>
+                        <li>WhatsApp button</li>
+                        <li>Free product editing rounds</li>
+                    </ul>
+                </div>
+                <div class="package-card">
+                    <h3>Ultimate</h3>
+                    <div class="price">Rs. 7,000</div>
+                    <ul>
+                        <li>Seller dashboard included</li>
+                        <li>Free custom domain</li>
+                        <li>All previous features</li>
+                        <li>Full feature package as agreed</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-            <!-- Packages Section (2 in 1 row layout) -->
-            <section id="packages">
-                <div class="section-title">
-                    <h2>Website Packages & Fee Structure</h2>
-                    <p>Choose the plan that fits your goals[span_17](start_span)[span_17](end_span)</p>
-                </div>
-                <div class="packages-grid">
-                    <div class="package-card">
-                        <h3>Basic</h3>
-                        <div class="price">Rs. 2,500[span_18](start_span)[span_18](end_span)</div>
-                        <ul>
-                            <li>Search bar included[span_19](start_span)[span_19](end_span)</li>
-                            <li>Products - up to 30[span_20](start_span)[span_20](end_span)</li>
-                            <li>Basic checkout system[span_21](start_span)[span_21](end_span)</li>
-                            <li>Free GitHub domain[span_22](start_span)[span_22](end_span)</li>
-                            <li>2 editing rounds free[span_23](start_span)[span_23](end_span)</li>
-                        </ul>
-                    </div>
-                    <div class="package-card">
-                        <h3>Standard</h3>
-                        <div class="price">Rs. 3,500[span_24](start_span)[span_24](end_span)</div>
-                        <ul>
-                            <li>Search bar included[span_25](start_span)[span_25](end_span)</li>
-                            <li>Products - up to 40[span_26](start_span)[span_26](end_span)</li>
-                            <li>Product categories & images[span_27](start_span)[span_27](end_span)</li>
-                            <li>Updated checkout system[span_28](start_span)[span_28](end_span)</li>
-                            <li>3 editing rounds free[span_29](start_span)[span_29](end_span)</li>
-                        </ul>
-                    </div>
-                    <div class="package-card popular">
-                        <h3>Professional</h3>
-                        <div class="price">Rs. 5,000[span_30](start_span)[span_30](end_span)</div>
-                        <ul>
-                            <li>Products up to 50[span_31](start_span)[span_31](end_span)</li>
-                            <li>Updated checkout systems[span_32](start_span)[span_32](end_span)</li>
-                            <li>Lifetime GitHub domain[span_33](start_span)[span_33](end_span)</li>
-                            <li>WhatsApp button & Search bar[span_34](start_span)[span_34](end_span)</li>
-                            <li>Free product editing rounds[span_35](start_span)[span_35](end_span)</li>
-                        </ul>
-                    </div>
-                    <div class="package-card">
-                        <h3>Ultimate</h3>
-                        <div class="price">Rs. 7,000[span_36](start_span)[span_36](end_span)</div>
-                        <ul>
-                            <li>Seller dashboard included[span_37](start_span)[span_37](end_span)</li>
-                            <li>Free custom domain[span_38](start_span)[span_38](end_span)</li>
-                            <li>All previous features included[span_39](start_span)[span_39](end_span)</li>
-                            <li>Full feature package as agreed[span_40](start_span)[span_40](end_span)</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+        <!-- Demo Websites Portion -->
+        <section id="demo">
+            <div class="section-title">
+                <h2>Demo Websites</h2>
+                <p>Websites we've built for clients</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">Demo 1: Green Living Eco Store</div>
+                <div class="portfolio-item">Demo 2: TechPulse Corporate</div>
+                <div class="portfolio-item">Demo 3: UrbanFashion Store</div>
+                <div class="portfolio-item">Demo 4: Creative Art Portfolio</div>
+            </div>
+        </section>
 
-            <!-- Demo Websites Portfolio Portion -->
-            <section id="demo">
-                <div class="section-title">
-                    <h2>Demo Websites Portfolio</h2>
-                    <p>Websites we've built to showcase our craftsmanship[span_41](start_span)[span_41](end_span).</p>
+        <!-- Client Reviews -->
+        <section id="reviews">
+            <div class="section-title">
+                <h2>Client Reviews</h2>
+                <p>What our clients say</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"DevCraft Studio delivered an amazing website for our store. The design is clean, fast and exactly what we needed."</p>
+                    <div class="client-name">- Ayesha Khan ⭐⭐⭐⭐⭐</div>
                 </div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">Demo 1: Green Living Eco Store[span_42](start_span)[span_42](end_span)</div>
-                    <div class="portfolio-item">Demo 2: TechPulse Corporate[span_43](start_span)[span_43](end_span)</div>
-                    <div class="portfolio-item">Demo 3: UrbanFashion Store[span_44](start_span)[span_44](end_span)</div>
-                    <div class="portfolio-item">Demo 4: Creative Art Portfolio[span_45](start_span)[span_45](end_span)</div>
+                <div class="testimonial-card">
+                    <p>"Professional, responsive and easy to work with. Highly recommended for a reliable web development team."</p>
+                    <div class="client-name">- Usman Raza ⭐⭐⭐⭐⭐</div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Client Reviews -->
-            <section id="reviews">
-                <div class="section-title">
-                    <h2>Client Testimonials</h2>
-                    <p>What our clients say[span_46](start_span)[span_46](end_span)</p>
-                </div>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <p>"DevCraft Studio delivered an amazing website for our store. The design is clean, fast and exactly what we needed.[span_47](start_span)"[span_47](end_span)</p>
-                        <div class="client-name">- Ayesha Khan ⭐⭐⭐⭐⭐[span_48](start_span)[span_48](end_span)</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"Professional, responsive and easy to work with. Highly recommended for a reliable web development team.[span_49](start_span)"[span_49](end_span)</p>
-                        <div class="client-name">- Usman Raza ⭐⭐⭐⭐⭐[span_50](start_span)[span_50](end_span)</div>
-                    </div>
-                </div>
-            </section>
+        <!-- Contact & Terms Section -->
+        <section id="contact" style="background: #FFFFFF; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Let's build your website</p>
+            </div>
+            <div style="text-align: center; font-size: 0.85rem; margin-bottom: 15px;">
+                <p><strong>Phone / WhatsApp:</strong> <span style="color: var(--secondary);">0303-4812714</span></p>
+                <p><strong>Email:</strong> info@devcraftstudio.com</p>
+                <p><strong>Location:</strong> Lahore, Pakistan</p>
+            </div>
+            <div style="background: var(--bg-light); padding: 12px; border-radius: 6px; font-size: 0.75rem;">
+                <strong>Terms Note:</strong> Editing rounds mein free limit ke andar product/content updates shamil hain. Sirf wohi features included honge jo har package ke sath wazeh tor par list kiye gaye hain.
+            </div>
+        </section>
 
-            <!-- Contact & Terms Section -->
-            <section id="contact" style="background: #FFFFFF; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <div class="section-title">
-                    <h2>Get In Touch</h2>
-                    <p>Let's build your website[span_51](start_span)[span_51](end_span)</p>
-                </div>
-                <div style="text-align: center; font-size: 0.95rem; margin-bottom: 20px;">
-                    <p><strong>Phone / WhatsApp:</strong> <span style="color: var(--secondary);">0303-4812714[span_52](start_span)[span_52](end_span)</span></p>
-                    <p><strong>Email:</strong> info@devcraftstudio.com[span_53](start_span)[span_53](end_span)</p>
-                    <p><strong>Location:</strong> Lahore, Pakistan[span_54](start_span)[span_54](end_span)</p>
-                </div>
-                <div style="background: var(--bg-light); padding: 15px; border-radius: 6px; font-size: 0.85rem;">
-                    <strong>Terms & Conditions Note:</strong> Editing rounds mein free limit ke andar product/content updates shamil hain[span_55](start_span)[span_55](end_span). Sirf wohi features included honge jo har package ke sath wazeh tor par list kiye gaye hain[span_56](start_span)[span_56](end_span).
-                </div>
-            </section>
-
-        </div>
     </div>
 
     <footer>
         <h3>DEVCRAFT STUDIO</h3>
-        <p>Your Vision, Our Code. All Rights Reserved © 2026[span_57](start_span)[span_57](end_span)[span_58](start_span)[span_58](end_span)</p>
+        <p>Your Vision, Our Code. All Rights Reserved © 2026</p>
     </footer>
 
 </body>
